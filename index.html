@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Syed Abdul Rehman Ali Shah — Site Reliability Engineer</title>
+  <meta name="description" content="SRE & Monitoring Expert — Grafana, Prometheus, Loki, AWS, Kubernetes, Terraform. 4+ years across fintech & IoT. Certifications in Prometheus, Datadog, InfluxDB." />
+  <link rel="canonical" href="https://example.com/" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Syed Abdul Rehman Ali Shah — SRE Portfolio" />
+  <meta property="og:description" content="Site Reliability Engineer specializing in observability and automation. Grafana · Prometheus · Loki · AWS · Kubernetes." />
+  <meta property="og:url" content="https://example.com/" />
+  <meta property="og:image" content="./headshot.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a0a0a'/><text x='50' y='58' font-size='54' text-anchor='middle' fill='white'>SR</text></svg>">
+
+  <!-- Schema.org Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Syed Abdul Rehman Ali Shah",
+    "jobTitle": "Site Reliability Engineer",
+    "email": "mailto:abdulrehman2496@gmail.com",
+    "telephone": "+92-313-5157738",
+    "address": {"@type":"PostalAddress","addressLocality":"Chaklala, Rawalpindi","addressCountry":"PK"},
+    "url": "https://example.com/",
+    "sameAs": [
+      "https://github.com/abdulrehman2496",
+      "https://www.linkedin.com/in/abdulrehman2496/"
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg: #0b0c0f;
+      --bg-soft: #0f1117;
+      --text: #e6e6e6;
+      --muted: #a7a7ad;
+      --card: #12141b;
+      --accent: #f59e0b; /* warm amber */
+      --accent-2: #f97316; /* warm orange */
+      --ring: #2e2e36;
+    }
+    :root.light{ --bg:#fafafa; --bg-soft:#ffffff; --text:#0f1222; --muted:#475569; --card:#ffffff; --accent:#d97706; --accent-2:#ea580c; --ring:#e5e7eb; }
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:1060px;margin-inline:auto;padding:0 1rem}
+    header{position:sticky;top:0;z-index:50;background:color-mix(in hsl, var(--bg) 85%, transparent);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--ring)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.9rem 0}
+    .brand{display:flex;align-items:center;gap:.6rem;font-weight:700}
+    .brand-badge{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;color:white;font-weight:800}
+    nav a{padding:.4rem .6rem;border-radius:8px}
+    nav a:hover, .btn:hover{background:var(--ring)}
+
+    .skip{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip:focus{left:1rem;top:1rem;width:auto;height:auto;background:var(--card);padding:.5rem .75rem;border-radius:.5rem;outline:2px solid var(--accent)}
+
+    /* Tech Minimalist layout */
+    .hero{padding:5.5rem 0 2.2rem;display:grid;grid-template-columns:1.25fr 1fr;gap:2rem;align-items:center}
+    @media (max-width:900px){.hero{grid-template-columns:1fr;gap:1.2rem;padding:4rem 0 1.2rem}}
+    .badge{display:inline-flex;gap:.4rem;align-items:center;border:1px solid var(--ring);padding:.25rem .6rem;border-radius:999px;font-size:.85rem;color:var(--muted)}
+    h1{font-size:clamp(2rem,5vw,3.1rem);line-height:1.08;margin:.65rem 0}
+    .lead{color:var(--muted);max-width:60ch}
+    .cta{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem .9rem;border:1px solid var(--ring);border-radius:.7rem}
+    .btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));border-color:transparent;color:white}
+
+    .card{background:var(--card);border:1px solid var(--ring);border-radius:1rem;padding:1rem}
+    .grid{display:grid;gap:1rem}
+    .grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    @media (max-width:900px){.grid.cols-3,.grid.cols-2{grid-template-columns:1fr}}
+
+    section{padding:2.2rem 0}
+    section h2{font-size:1.5rem;margin:0 0 1rem}
+    .muted{color:var(--muted)}
+
+    .avatar{aspect-ratio:1/1;border-radius:1rem;overflow:hidden;border:1px solid var(--ring)}
+    .kpis{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+    .kpis .pill{padding:.4rem .65rem;border:1px solid var(--ring);border-radius:999px;font-size:.85rem;color:var(--muted)}
+
+    .timeline{position:relative}
+    .timeline:before{content:"";position:absolute;left:10px;top:0;bottom:0;width:2px;background:var(--ring)}
+    .tl-item{position:relative;padding-left:2rem;margin:1rem 0}
+    .tl-dot{position:absolute;left:3px;top:.5rem;width:14px;height:14px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-2))}
+    .tl-item .where{font-weight:600}
+    .tl-item .when{color:var(--muted);font-size:.9rem}
+
+    footer{padding:2rem 0;border-top:1px solid var(--ring);color:var(--muted);font-size:.95rem}
+    .social a{border:1px solid var(--ring);padding:.45rem .7rem;border-radius:999px}
+    .top{position:fixed;right:1rem;bottom:1rem}
+
+    :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:.35rem}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Main Navigation">
+      <div class="brand">
+        <span class="brand-badge" aria-hidden="true">SR</span>
+        <span>Syed Abdul Rehman Ali Shah</span>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#certs">Certifications</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <button id="themeToggle" class="btn" type="button" aria-label="Toggle dark mode">🌓</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="intro">
+      <div>
+        <span class="badge">Site Reliability Engineer / Monitoring Expert</span>
+        <h1 id="intro">Building reliable & observable systems.</h1>
+        <p class="lead">Senior Monitoring Engineer with 4+ years of experience across fintech & IoT — specializing in Grafana, Prometheus, Loki, and automation on AWS & Kubernetes. I design dashboards, alerts, and pipelines that improve visibility, performance, and MTTR.</p>
+        <div class="cta">
+          <a class="btn primary" href="#experience">View Experience</a>
+          <a class="btn" href="mailto:abdulrehman2496@gmail.com">Email Me</a>
+          <a class="btn" href="./ResumeSyed.docx" download>Download Résumé</a>
+        </div>
+        <div class="kpis" aria-label="Quick stats">
+          <span class="pill">Grafana · Prometheus · Loki</span>
+          <span class="pill">AWS · Kubernetes · Terraform</span>
+          <span class="pill">OpsGenie · Jenkins/GitHub Actions</span>
+        </div>
+      </div>
+      <div>
+        <figure class="avatar card">
+          <img src="./headshot.jpg" alt="Syed Abdul Rehman Ali Shah sitting at a laptop" loading="lazy" width="800" height="800">
+        </figure>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" aria-labelledby="about-h">
+      <h2 id="about-h">About</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <p>Hi, I’m Syed. I help teams ship resilient, observable platforms. I’ve led monitoring platform initiatives, built ELK/Loki stacks, and automated infrastructure with Terraform, ArgoCD, and CI pipelines. I enjoy pragmatic troubleshooting and customer‑centric reliability work.</p>
+          <ul>
+            <li>📍 Chaklala, Rawalpindi — Pakistan</li>
+            <li>✉️ <a href="mailto:abdulrehman2496@gmail.com">abdulrehman2496@gmail.com</a></li>
+            <li>📱 <a href="tel:+923135157738">+92 313 515 7738</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Education</h3>
+          <p><strong>Comsats University, Islamabad</strong><br>Bachelor of Electrical (Computer) Engineering — 2015–2019</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" aria-labelledby="exp-h">
+      <h2 id="exp-h">Experience</h2>
+      <div class="card timeline">
+        <div class="tl-item">
+          <div class="tl-dot" aria-hidden="true"></div>
+          <div class="where">Senior Reliability Engineer — Entersekt (Remote, South Africa)</div>
+          <div class="when">Jul 2024 – Present</div>
+          <ul class="muted">
+            <li>Deploy & maintain highly available OpenStack environments; enhance monitoring & alerting for proactive issue detection.</li>
+            <li>Run performance analysis & reliability improvements; contribute to incident response and post‑mortems.</li>
+            <li>Drive automation across tooling to boost efficiency and security.</li>
+          </ul>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot" aria-hidden="true"></div>
+          <div class="where">Technical Lead — Monitoring Platform — Modirum (Remote, Norway)</div>
+          <div class="when">Apr 2022 – Aug 2024</div>
+          <ul class="muted">
+            <li>Rolled out Prometheus, Grafana, CloudWatch with Loki/Graylog/Nagios; configured alerts for critical KPIs.</li>
+            <li>Implemented log management and tracing (CloudWatch Logs / ELK, AWS X‑Ray).</li>
+            <li>Delivered documented, supportable solutions with senior architects.</li>
+          </ul>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot" aria-hidden="true"></div>
+          <div class="where">Solution Integration Engineer (L2) — Ericsson</div>
+          <div class="when">Sep 2021 – Apr 2022</div>
+          <ul class="muted">
+            <li>Built ELK aggregation for Docker/Kubernetes; supported post‑cutover systems.</li>
+            <li>Owned integration & testing; automated configs and issue resolution.</li>
+          </ul>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot" aria-hidden="true"></div>
+          <div class="where">Systems Engineer (L1) — Ericsson</div>
+          <div class="when">Jan 2021 – Oct 2021</div>
+          <ul class="muted">
+            <li>Configured monitoring & alerting for fault/performance management; scripting for web scraping.</li>
+            <li>Managed server monitoring and scheduled tasks via cron.</li>
+          </ul>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot" aria-hidden="true"></div>
+          <div class="where">DevOps Intern — Eurus Technologies</div>
+          <div class="when">May 2020 – Jan 2021</div>
+          <ul class="muted">
+            <li>Hands‑on with AWS (EC2, RDS, VPC, S3), Docker & GitHub; Bash/Python automation.</li>
+          </ul>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot" aria-hidden="true"></div>
+          <div class="where">IT Support Engineer — Planet Beyond</div>
+          <div class="when">Jul 2019 – May 2020</div>
+          <ul class="muted">
+            <li>Managed data‑center services; network/system monitoring with Monit; SQL reporting for clients.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certs" aria-labelledby="certs-h">
+      <h2 id="certs-h">Certifications</h2>
+      <div class="grid cols-3">
+        <div class="card"><strong>AWS Certified Solutions Architect – Associate</strong><br><span class="muted">SAA‑C03</span></div>
+        <div class="card"><strong>Prometheus Certified Associate (PCA)</strong><br><span class="muted">Feb 2023</span></div>
+        <div class="card"><strong>Monitoring & Observability with Datadog</strong><br><span class="muted">Oct 2022</span></div>
+        <div class="card"><strong>InfluxDB Essentials</strong><br><span class="muted">Nov 2022</span></div>
+        <div class="card"><strong>Datadog Foundation</strong><br><span class="muted">Feb 2025</span></div>
+        <div class="card"><strong>Datadog 101: Developer</strong><br><span class="muted">Mar 2025</span></div>
+        <div class="card"><strong>Datadog 101: SRE</strong><br><span class="muted">Mar 2025</span></div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" aria-labelledby="skills-h">
+      <h2 id="skills-h">Skills</h2>
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>Monitoring & Observability</h3>
+          <p class="muted">Grafana, Prometheus, Loki, Graylog, ELK, OpsGenie, Datadog</p>
+        </div>
+        <div class="card">
+          <h3>Cloud & Infra</h3>
+          <p class="muted">AWS, Kubernetes, Terraform, ArgoCD, OpenStack</p>
+        </div>
+        <div class="card">
+          <h3>Automation & Data</h3>
+          <p class="muted">Jenkins, GitHub Actions, Bash, Python, InfluxDB, PostgreSQL, MySQL</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" aria-labelledby="contact-h">
+      <h2 id="contact-h">Contact</h2>
+      <div class="card">
+        <p>Reach out for SRE/Platform/Observability roles, system audits, or consulting.</p>
+        <p>
+          <a class="btn" href="mailto:abdulrehman2496@gmail.com">✉️ abdulrehman2496@gmail.com</a>
+          <span style="display:inline-block;width:.5rem"></span>
+          <a class="btn" href="tel:+923135157738">📞 +92 313 515 7738</a>
+          <span style="display:inline-block;width:.5rem"></span>
+          <a class="btn" href="./ResumeSyed.docx" download>Download Résumé</a>
+          <span style="display:inline-block;width:.5rem"></span>
+          <a class="btn" href="https://github.com/abdulrehman2496" target="_blank" rel="noopener">GitHub</a>
+          <span style="display:inline-block;width:.5rem"></span>
+          <a class="btn" href="https://www.linkedin.com/in/abdulrehman2496/" target="_blank" rel="noopener">LinkedIn</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" role="contentinfo">
+      <div style="display:flex;justify-content:space-between;gap:1rem;align-items:center;flex-wrap:wrap">
+        <p>© <span id="year"></span> Syed Abdul Rehman Ali Shah.</p>
+        <div class="social" aria-label="Social links" style="display:flex;gap:.5rem">
+          <a href="/rss.xml" aria-label="RSS">RSS</a>
+          <a href="/privacy" aria-label="Privacy">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a class="btn top" href="#top" aria-label="Back to top">↑</a>
+
+  <script>
+    // Theme toggle with persistence
+    (function(){
+      const root = document.documentElement;
+      const saved = localStorage.getItem('theme');
+      if(saved){ root.classList.toggle('light', saved === 'light'); }
+      else if(window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches){
+        root.classList.add('light');
+      }
+      document.getElementById('themeToggle').addEventListener('click', ()=>{
+        root.classList.toggle('light');
+        localStorage.setItem('theme', root.classList.contains('light') ? 'light' : 'dark');
+      });
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
