@@ -171,7 +171,11 @@
           </ul>
           <details style="margin-top:.75rem">
             <summary>Additional learning (courses)</summary>
-            <p class="expander-note">Datadog Foundation (Feb 2025), Datadog 101: Developer (Mar 2025), Datadog 101: SRE (Mar 2025).</p>
+            <ul class="expander-note">
+              <li>Datadog Foundation (Feb 2025), Datadog 101: Developer (Mar 2025), Datadog 101: SRE (Mar 2025).</li>
+              <li>n8n workflow automation — building event‑driven integrations and Slack/Email bots.</li>
+              <li>AI agents — orchestrating tool‑using LLMs to automate monitoring/ops tasks.</li>
+            </ul>
           </details>
         </div>
         <div class="card">
@@ -184,63 +188,94 @@
     <!-- Experience -->
     <section id="experience" aria-labelledby="exp-h">
       <h2 id="exp-h">Experience</h2>
+      <div class="cta" style="margin-bottom:.5rem">
+        <button class="btn" type="button" onclick="expandAll('experience',true)">Expand all</button>
+        <button class="btn" type="button" onclick="expandAll('experience',false)">Collapse all</button>
+      </div>
       <div class="card timeline">
-        <div class="tl-item">
-          <div class="tl-dot" aria-hidden="true"></div>
-          <div class="where">Senior Reliability Engineer — Entersekt (Remote, South Africa)</div>
-          <div class="when">Jul 2024 – Present</div>
-          <ul class="muted">
+        <!-- Each role as its own expander -->
+        <details class="tl-exp" open>
+          <summary>
+            <span class="tl-item" style="margin:0;padding-left:2rem">
+              <span class="tl-dot" aria-hidden="true"></span>
+              <span class="where">Senior Reliability Engineer — Entersekt (Remote, South Africa)</span>
+              <span class="when"> · Jul 2024 – Present</span>
+            </span>
+          </summary>
+          <ul class="muted" style="margin:0 0 1rem 2rem">
             <li>Deploy & maintain highly available OpenStack environments; enhance monitoring & alerting for proactive issue detection.</li>
             <li>Run performance analysis & reliability improvements; contribute to incident response and post‑mortems.</li>
             <li>Drive automation across tooling to boost efficiency and security.</li>
           </ul>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot" aria-hidden="true"></div>
-          <div class="where">Technical Lead — Monitoring Platform — Modirum (Remote, Norway)</div>
-          <div class="when">Apr 2022 – Aug 2024</div>
-          <ul class="muted">
+        </details>
+
+        <details class="tl-exp" open>
+          <summary>
+            <span class="tl-item" style="margin:0;padding-left:2rem">
+              <span class="tl-dot" aria-hidden="true"></span>
+              <span class="where">Technical Lead — Monitoring Platform — Modirum (Remote, Norway)</span>
+              <span class="when"> · Apr 2022 – Aug 2024</span>
+            </span>
+          </summary>
+          <ul class="muted" style="margin:0 0 1rem 2rem">
             <li>Rolled out Prometheus, Grafana, CloudWatch with Loki/Graylog/Nagios; configured alerts for critical KPIs.</li>
             <li>Implemented log management and tracing (CloudWatch Logs / ELK, AWS X‑Ray).</li>
             <li>Delivered documented, supportable solutions with senior architects.</li>
           </ul>
-        </div>
-        <details>
-          <summary>Show earlier experience</summary>
-          <div class="tl-item" style="margin-top:1rem">
-            <div class="tl-dot" aria-hidden="true"></div>
-            <div class="where">Solution Integration Engineer (L2) — Ericsson</div>
-            <div class="when">Sep 2021 – Apr 2022</div>
-            <ul class="muted">
-              <li>Built ELK aggregation for Docker/Kubernetes; supported post‑cutover systems.</li>
-              <li>Owned integration & testing; automated configs and issue resolution.</li>
-            </ul>
-          </div>
-          <div class="tl-item">
-            <div class="tl-dot" aria-hidden="true"></div>
-            <div class="where">Systems Engineer (L1) — Ericsson</div>
-            <div class="when">Jan 2021 – Oct 2021</div>
-            <ul class="muted">
-              <li>Configured monitoring & alerting for fault/performance management; scripting for web scraping.</li>
-              <li>Managed server monitoring and scheduled tasks via cron.</li>
-            </ul>
-          </div>
-          <div class="tl-item">
-            <div class="tl-dot" aria-hidden="true"></div>
-            <div class="where">DevOps Intern — Eurus Technologies</div>
-            <div class="when">May 2020 – Jan 2021</div>
-            <ul class="muted">
-              <li>Hands‑on with AWS (EC2, RDS, VPC, S3), Docker & GitHub; Bash/Python automation.</li>
-            </ul>
-          </div>
-          <div class="tl-item">
-            <div class="tl-dot" aria-hidden="true"></div>
-            <div class="where">IT Support Engineer — Planet Beyond</div>
-            <div class="when">Jul 2019 – May 2020</div>
-            <ul class="muted">
-              <li>Managed data‑center services; network/system monitoring with Monit; SQL reporting for clients.</li>
-            </ul>
-          </div>
+        </details>
+
+        <details class="tl-exp">
+          <summary>
+            <span class="tl-item" style="margin:0;padding-left:2rem">
+              <span class="tl-dot" aria-hidden="true"></span>
+              <span class="where">Solution Integration Engineer (L2) — Ericsson</span>
+              <span class="when"> · Sep 2021 – Apr 2022</span>
+            </span>
+          </summary>
+          <ul class="muted" style="margin:0 0 1rem 2rem">
+            <li>Built ELK aggregation for Docker/Kubernetes; supported post‑cutover systems.</li>
+            <li>Owned integration & testing; automated configs and issue resolution.</li>
+          </ul>
+        </details>
+
+        <details class="tl-exp">
+          <summary>
+            <span class="tl-item" style="margin:0;padding-left:2rem">
+              <span class="tl-dot" aria-hidden="true"></span>
+              <span class="where">Systems Engineer (L1) — Ericsson</span>
+              <span class="when"> · Jan 2021 – Oct 2021</span>
+            </span>
+          </summary>
+          <ul class="muted" style="margin:0 0 1rem 2rem">
+            <li>Configured monitoring & alerting for fault/performance management; scripting for web scraping.</li>
+            <li>Managed server monitoring and scheduled tasks via cron.</li>
+          </ul>
+        </details>
+
+        <details class="tl-exp">
+          <summary>
+            <span class="tl-item" style="margin:0;padding-left:2rem">
+              <span class="tl-dot" aria-hidden="true"></span>
+              <span class="where">DevOps Intern — Eurus Technologies</span>
+              <span class="when"> · May 2020 – Jan 2021</span>
+            </span>
+          </summary>
+          <ul class="muted" style="margin:0 0 1rem 2rem">
+            <li>Hands‑on with AWS (EC2, RDS, VPC, S3), Docker & GitHub; Bash/Python automation.</li>
+          </ul>
+        </details>
+
+        <details class="tl-exp">
+          <summary>
+            <span class="tl-item" style="margin:0;padding-left:2rem">
+              <span class="tl-dot" aria-hidden="true"></span>
+              <span class="where">IT Support Engineer — Planet Beyond</span>
+              <span class="when"> · Jul 2019 – May 2020</span>
+            </span>
+          </summary>
+          <ul class="muted" style="margin:0 0 1rem 2rem">
+            <li>Managed data‑center services; network/system monitoring with Monit; SQL reporting for clients.</li>
+          </ul>
         </details>
       </div>
     </section>
