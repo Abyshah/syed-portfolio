@@ -102,6 +102,14 @@
     .top{position:fixed;right:1rem;bottom:1rem}
 
     :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:.35rem}
+      /* Expander (native details/summary) */
+    details{border:1px solid var(--ring);border-radius:.75rem;padding:.75rem 1rem;background:var(--card)}
+    details+details{margin-top:1rem}
+    summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:.5rem;font-weight:600}
+    summary::-webkit-details-marker{display:none}
+    summary:after{content:"▾";transition:transform .15s ease;opacity:.8}
+    details[open] summary:after{transform:rotate(180deg)}
+    .expander-note{color:var(--muted);font-size:.9rem;margin:.25rem 0 0}
   </style>
 </head>
 <body>
@@ -159,6 +167,10 @@
             <li>✉️ <a href="mailto:abdulrehman2496@gmail.com">abdulrehman2496@gmail.com</a></li>
             <li>📱 <a href="tel:+923135157738">+92 313 515 7738</a></li>
           </ul>
+          <details style="margin-top:.75rem">
+            <summary>Additional learning (courses)</summary>
+            <p class="expander-note">Datadog Foundation (Feb 2025), Datadog 101: Developer (Mar 2025), Datadog 101: SRE (Mar 2025).</p>
+          </details>
         </div>
         <div class="card">
           <h3>Education</h3>
@@ -170,7 +182,12 @@
     <!-- Experience -->
     <section id="experience" aria-labelledby="exp-h">
       <h2 id="exp-h">Experience</h2>
+      <div class="cta" style="margin-bottom:.5rem">
+        <button class="btn" type="button" onclick="expandAll('experience',true)">Expand all</button>
+        <button class="btn" type="button" onclick="expandAll('experience',false)">Collapse all</button>
+      </div>
       <div class="card timeline">
+        <!-- Always visible roles -->
         <div class="tl-item">
           <div class="tl-dot" aria-hidden="true"></div>
           <div class="where">Senior Reliability Engineer — Entersekt (Remote, South Africa)</div>
@@ -191,40 +208,45 @@
             <li>Delivered documented, supportable solutions with senior architects.</li>
           </ul>
         </div>
-        <div class="tl-item">
-          <div class="tl-dot" aria-hidden="true"></div>
-          <div class="where">Solution Integration Engineer (L2) — Ericsson</div>
-          <div class="when">Sep 2021 – Apr 2022</div>
-          <ul class="muted">
-            <li>Built ELK aggregation for Docker/Kubernetes; supported post‑cutover systems.</li>
-            <li>Owned integration & testing; automated configs and issue resolution.</li>
-          </ul>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot" aria-hidden="true"></div>
-          <div class="where">Systems Engineer (L1) — Ericsson</div>
-          <div class="when">Jan 2021 – Oct 2021</div>
-          <ul class="muted">
-            <li>Configured monitoring & alerting for fault/performance management; scripting for web scraping.</li>
-            <li>Managed server monitoring and scheduled tasks via cron.</li>
-          </ul>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot" aria-hidden="true"></div>
-          <div class="where">DevOps Intern — Eurus Technologies</div>
-          <div class="when">May 2020 – Jan 2021</div>
-          <ul class="muted">
-            <li>Hands‑on with AWS (EC2, RDS, VPC, S3), Docker & GitHub; Bash/Python automation.</li>
-          </ul>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot" aria-hidden="true"></div>
-          <div class="where">IT Support Engineer — Planet Beyond</div>
-          <div class="when">Jul 2019 – May 2020</div>
-          <ul class="muted">
-            <li>Managed data‑center services; network/system monitoring with Monit; SQL reporting for clients.</li>
-          </ul>
-        </div>
+
+        <!-- Collapsible: earlier roles -->
+        <details>
+          <summary>Show earlier experience</summary>
+          <div class="tl-item" style="margin-top:1rem">
+            <div class="tl-dot" aria-hidden="true"></div>
+            <div class="where">Solution Integration Engineer (L2) — Ericsson</div>
+            <div class="when">Sep 2021 – Apr 2022</div>
+            <ul class="muted">
+              <li>Built ELK aggregation for Docker/Kubernetes; supported post‑cutover systems.</li>
+              <li>Owned integration & testing; automated configs and issue resolution.</li>
+            </ul>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot" aria-hidden="true"></div>
+            <div class="where">Systems Engineer (L1) — Ericsson</div>
+            <div class="when">Jan 2021 – Oct 2021</div>
+            <ul class="muted">
+              <li>Configured monitoring & alerting for fault/performance management; scripting for web scraping.</li>
+              <li>Managed server monitoring and scheduled tasks via cron.</li>
+            </ul>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot" aria-hidden="true"></div>
+            <div class="where">DevOps Intern — Eurus Technologies</div>
+            <div class="when">May 2020 – Jan 2021</div>
+            <ul class="muted">
+              <li>Hands‑on with AWS (EC2, RDS, VPC, S3), Docker & GitHub; Bash/Python automation.</li>
+            </ul>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot" aria-hidden="true"></div>
+            <div class="where">IT Support Engineer — Planet Beyond</div>
+            <div class="when">Jul 2019 – May 2020</div>
+            <ul class="muted">
+              <li>Managed data‑center services; network/system monitoring with Monit; SQL reporting for clients.</li>
+            </ul>
+          </div>
+        </details>
       </div>
     </section>
 
@@ -259,6 +281,10 @@
           <p class="muted">Jenkins, GitHub Actions, Bash, Python, InfluxDB, PostgreSQL, MySQL</p>
         </div>
       </div>
+      <details style="margin-top:1rem">
+        <summary>More skills & tools</summary>
+        <p class="expander-note">Alertmanager, CloudWatch, Loki promtail, Nagios, Ansible, Linux, Docker, CI/CD pipelines, cost/perf tuning, runbooks, incident response, SLOs/SLA, tracing (X‑Ray), and dashboard UX.</p>
+      </details>
     </section>
 
     <!-- Contact -->
@@ -310,6 +336,11 @@
       });
       document.getElementById('year').textContent = new Date().getFullYear();
     })();
+      function expandAll(sectionId, open){
+      const section = document.getElementById(sectionId);
+      if(!section) return;
+      section.querySelectorAll('details').forEach(d=>{ d.open = open; });
+    }
   </script>
 </body>
 </html>
