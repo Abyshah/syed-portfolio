@@ -110,6 +110,8 @@
     summary:after{content:"▾";transition:transform .15s ease;opacity:.8}
     details[open] summary:after{transform:rotate(180deg)}
     .expander-note{color:var(--muted);font-size:.9rem;margin:.25rem 0 0}
+  .badge-link{display:inline-flex;align-items:center;gap:.4rem;border:1px solid var(--ring);border-radius:999px;padding:.35rem .6rem;font-size:.9rem}
+    .badge-link:before{content:"🏅"}
   </style>
 </head>
 <body>
@@ -141,7 +143,7 @@
         <div class="cta">
           <a class="btn primary" href="#experience">View Experience</a>
           <a class="btn" href="mailto:abdulrehman2496@gmail.com">Email Me</a>
-          <a class="btn" href="./ResumeSyed.docx" download>Download Résumé</a>
+          <a class="btn" href="./ResumeSyed.pdf" download>Download Résumé</a>
         </div>
         <div class="kpis" aria-label="Quick stats">
           <span class="pill">Grafana · Prometheus · Loki</span>
@@ -182,12 +184,7 @@
     <!-- Experience -->
     <section id="experience" aria-labelledby="exp-h">
       <h2 id="exp-h">Experience</h2>
-      <div class="cta" style="margin-bottom:.5rem">
-        <button class="btn" type="button" onclick="expandAll('experience',true)">Expand all</button>
-        <button class="btn" type="button" onclick="expandAll('experience',false)">Collapse all</button>
-      </div>
       <div class="card timeline">
-        <!-- Always visible roles -->
         <div class="tl-item">
           <div class="tl-dot" aria-hidden="true"></div>
           <div class="where">Senior Reliability Engineer — Entersekt (Remote, South Africa)</div>
@@ -208,8 +205,6 @@
             <li>Delivered documented, supportable solutions with senior architects.</li>
           </ul>
         </div>
-
-        <!-- Collapsible: earlier roles -->
         <details>
           <summary>Show earlier experience</summary>
           <div class="tl-item" style="margin-top:1rem">
@@ -254,10 +249,28 @@
     <section id="certs" aria-labelledby="certs-h">
       <h2 id="certs-h">Certifications</h2>
       <div class="grid cols-3">
-        <div class="card"><strong>AWS Certified Solutions Architect – Associate</strong><br><span class="muted">SAA‑C03</span></div>
-        <div class="card"><strong>Prometheus Certified Associate (PCA)</strong><br><span class="muted">Feb 2023</span></div>
+        <div class="card">
+          <strong>AWS Certified Solutions Architect – Associate</strong><br>
+          <span class="muted">SAA‑C03</span>
+          <div style="margin-top:.5rem">
+            <a class="badge-link" href="https://www.credly.com/badges/26ddde77-539b-4c96-8a19-f5679cc32bb6" target="_blank" rel="noopener">View badge</a>
+          </div>
+        </div>
+        <div class="card">
+          <strong>Prometheus Certified Associate (PCA)</strong><br>
+          <span class="muted">Feb 2023</span>
+          <div style="margin-top:.5rem">
+            <a class="badge-link" href="https://www.credly.com/badges/d13d18d3-b3f6-4a19-865a-0db754ecaef6" target="_blank" rel="noopener">View badge</a>
+          </div>
+        </div>
+        <div class="card">
+          <strong>InfluxDB Essentials</strong><br>
+          <span class="muted">Nov 2022</span>
+          <div style="margin-top:.5rem">
+            <a class="badge-link" href="https://www.credly.com/badges/ffa9604c-72c4-4126-8da3-bf5c05695a4d" target="_blank" rel="noopener">View badge</a>
+          </div>
+        </div>
         <div class="card"><strong>Monitoring & Observability with Datadog</strong><br><span class="muted">Oct 2022</span></div>
-        <div class="card"><strong>InfluxDB Essentials</strong><br><span class="muted">Nov 2022</span></div>
         <div class="card"><strong>Datadog Foundation</strong><br><span class="muted">Feb 2025</span></div>
         <div class="card"><strong>Datadog 101: Developer</strong><br><span class="muted">Mar 2025</span></div>
         <div class="card"><strong>Datadog 101: SRE</strong><br><span class="muted">Mar 2025</span></div>
@@ -297,7 +310,7 @@
           <span style="display:inline-block;width:.5rem"></span>
           <a class="btn" href="tel:+923135157738">📞 +92 313 515 7738</a>
           <span style="display:inline-block;width:.5rem"></span>
-          <a class="btn" href="./ResumeSyed.docx" download>Download Résumé</a>
+          <a class="btn" href="./ResumeSyed.pdf" download>Download Résumé</a>
           <span style="display:inline-block;width:.5rem"></span>
           <a class="btn" href="https://github.com/abdulrehman2496" target="_blank" rel="noopener">GitHub</a>
           <span style="display:inline-block;width:.5rem"></span>
